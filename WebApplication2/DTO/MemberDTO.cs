@@ -1,5 +1,5 @@
-﻿namespace Library.DTO;
-public class MemberDTO
+﻿namespace Library.Dto;
+public class MemberDto
 {
     public int Id { get; set; }
     public string? FirstName { get; set; }

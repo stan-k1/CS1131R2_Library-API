@@ -5,7 +5,7 @@ namespace Library
     public class LibraryDBContext : DbContext
     {
         public DbSet<Book> Books => Set<Book>();
-        public DbSet<Author> Auhtors => Set<Author>();
+        public DbSet<Author> Authors => Set<Author>();
         public DbSet<Member> Members => Set<Member>();
 
        public LibraryDBContext(DbContextOptions<LibraryDBContext> options)

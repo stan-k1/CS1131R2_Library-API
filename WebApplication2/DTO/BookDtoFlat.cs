@@ -1,4 +1,4 @@
-﻿namespace Library.DTO
+﻿namespace Library.Dto
 {
     public class BookDtoFlat
     {

@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Http.Json;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json.Serialization;
 using Library;
+using Library.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +14,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<LibraryDBContext>
     (options => options.UseSqlServer(builder.Configuration.GetConnectionString("Library")));
 builder.Services.Configure<JsonOptions>(options => options.SerializerOptions.ReferenceHandler = ReferenceHandler.Preserve);
+builder.Services.AddScoped<IBookService, BookService>();
 
 
 var app = builder.Build();
